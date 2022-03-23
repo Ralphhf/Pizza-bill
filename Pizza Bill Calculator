@@ -1,0 +1,38 @@
+print("WELCOME TO PIZZA EL SOULTAN: ")
+pizza_size = input("Enter the size of pizza you want S,M,L: ")
+add_pepperoni = input("Do you want to add pepeeroni, Yes or No: ")
+extra_cheese = input("Do you want extra cheese, Yes or No: ")
+final_bill = 0
+
+tip_percentage = input("Add tip, 10%-15%-20%: ")
+taxes = final_bill*3/100
+if pizza_size == "S":
+    final_bill+= 15
+elif pizza_size == "M":
+    final_bill += 20
+elif pizza_size == "L":
+    final_bill += 25
+
+if add_pepperoni == "Yes":   
+    if pizza_size == "S":
+        final_bill += 2
+    else:
+          final_bill +=3
+if extra_cheese == "Yes":
+            final_bill += 1
+
+print("Final bill before tip: " + str(final_bill))
+
+if tip_percentage == "10":
+    final_bill = final_bill + final_bill*10/100
+elif tip_percentage == "15":
+    final_bill = final_bill + final_bill*15/100
+elif tip_percentage == "20":
+    final_bill = final_bill + final_bill*20/100
+
+print("Total bill after tip: " + str(final_bill))
+taxes = final_bill*3/100
+
+print("Total bill including taxes: " + str(final_bill + taxes))
+print("\\\\\\\\\\\PAY CASH\\\\\\\\\\\PAY CARD///////////")
+
